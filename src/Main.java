@@ -1,8 +1,6 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.stream.Collectors;
 
 public class Main {
     private static final Integer PUERTO = 12345;
@@ -38,7 +36,7 @@ public class Main {
         return clientes.stream().filter(n -> n.getId() == id).findFirst().orElse(null);
     }
 
-    // --- Algoritmo de Berkeley --
+    // --- Algoritmo de Berkeley
     public void berkeley() {
         System.out.println("\n--- INICIANDO ALGORITMO DE BERKELEY ---");
         Nodo master = server(); // Usar el método server() que ya tienes
